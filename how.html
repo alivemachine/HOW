@@ -1,0 +1,188 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>H ◯ W</title></head>
+
+<body style="overflow:hidden;">
+    <script>
+function callMasloText(){
+    
+    var formdata = new FormData();
+formdata.append("media", document.getElementById('media2').value);
+formdata.append("originTextID", document.getElementById('originTextID').value);
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+var url = "https://maslocompanionserver.wl.r.appspot.com/analyzeText";
+//var url = "http://localhost:8080/analyzeMedia"
+
+fetch(url, requestOptions)
+  .then(response => response.text())
+  .then(result => updateResults(result))
+  .catch(error => console.log('error', error));
+
+
+}
+
+
+function callMaslo(){
+   
+    var formdata = new FormData();
+formdata.append("media", document.getElementById('media').files[0]);
+formdata.append("type", document.getElementById('type').value);
+formdata.append("originMediaID", document.getElementById('originMediaID').value);
+formdata.append("modelsToCall", document.getElementById('modelsToCall').value);
+console.log(document.getElementById('media').files[0]);
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+var url = "https://maslocompanionserver.wl.r.appspot.com/analyzeMedia";
+//var url = "http://localhost:8080/analyzeMedia"
+
+fetch(url, requestOptions)
+  .then(response => response.text())
+  .then(result => updateResults(result))
+  .catch(error => console.log('error', error));
+
+
+}
+		
+		
+var asciiArray = [];
+function timer(){
+	
+}
+function goHOW(str){
+	 
+	//var boundarylist=str.split(':');
+	//for(var i=0; i < boundarylist.length-1; i++){
+	//	boundarylist[i] = boundarylist[i].replace(/[^\w\s]/gi, '').replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g,"");
+	//}
+	str.replace(/[^\w\s]/gi, '').replace(/(\r\n|\n|\r)/gm, "").replace(/\s+/g,"");
+	asciiArray = [];
+	for(var i=0; i<str.length; i++){
+		asciiArray.push(str.charCodeAt(i));
+	}
+	var allpixels = chunkArray(asciiArray, 6);
+	var allboxshadows = [];
+	for(var i=0; i<allpixels.length; i++){
+		allpixels[i][0] = wrap(allpixels[i][0],0,document.getElementById('jellyfish').clientHeight);
+		allpixels[i][1] = wrap(allpixels[i][1],0,document.getElementById('jellyfish').clientHeight);
+		allpixels[i][2] = wrap(allpixels[i][2],0,255);
+		allpixels[i][3] = wrap(allpixels[i][3],0,255);
+		allpixels[i][4] = wrap(allpixels[i][4],0,255);
+		allpixels[i][5] = wrap(allpixels[i][5],0,4);
+		allboxshadows[i] = allpixels[i][0]+"px "+allpixels[i][1]+"px 0 "+allpixels[i][5]+"px rgba("+allpixels[i][2]+","+allpixels[i][3]+","+allpixels[i][4]+")";
+	}
+	allboxshadows.pop();
+	console.log(allpixels);
+	document.getElementById("pixel").style.boxShadow = allboxshadows.join(", ");
+}
+function chunkArray(myArray, chunk_size){
+    var index = 0;
+    var arrayLength = myArray.length;
+    var tempArray = [];
+    
+    for (index = 0; index < arrayLength; index += chunk_size) {
+        myChunk = myArray.slice(index, index+chunk_size);
+        // Do something if you want with the group
+        tempArray.push(myChunk);
+    }
+
+    return tempArray;
+}
+function value_limit(val, min, max) {
+  return val < min ? min : (val > max ? max : val);
+}	
+function wrap(x, x_min, x_max){
+	if (x < x_min)
+    return x_max - (x_min - x) % (x_max - x_min);
+else
+    return x_min + (x - x_min) % (x_max - x_min);
+}
+		
+		
+		
+		
+function updateResults(result) {
+    //console.log(JSON.stringify(JSON.parse(result), undefined, 2));
+    //document.getElementById("json").innerHTML = JSON.stringify(JSON.parse(result), undefined, 2);
+	goHOW(JSON.stringify(JSON.parse(result), undefined, 2));
+  }
+    </script>
+	
+	
+		<form id="form" class="appnitro" enctype="multipart/form-data" method="post" action="javascript:callMaslo()">					
+			<ul>
+			
+					<li id="li_1">
+		<label class="description" for="element_1">Image </label>
+		<div>
+			<input id="media" name="media" class="element file" type="file"> 
+		</div>  
+		</li>		<li id="li_2">
+		<label class="description" for="element_2">type </label>
+		<div>
+			<input id="type" name="type" class="element text medium" type="text" maxlength="255" value="image"> 
+		</div> 
+		</li>		<li id="li_3">
+		<label class="description" for="element_3">originMediaID </label>
+		<div>
+			<input id="originMediaID" name="originalMediaID" class="element text medium" type="text" maxlength="255" value="324234lkjhkljh234234"> 
+		</div> 
+		</li>		<li id="li_4">
+		<label class="description" for="element_4">modelsToCall </label>
+		<div>
+			<input id="modelsToCall" name="modelsToCall" class="element text medium" type="text" maxlength="255" value="{&quot;imageMeta&quot;:1,&quot;imageSceneOut&quot;:1,&quot;imageObjects&quot;:0,&quot;imageTox&quot;:1,&quot;imagePose&quot;:1,&quot;faces&quot;:0,&quot;photoManipulation&quot;:1}"> 
+		</div> 
+		</li>
+			
+					<li class="buttons">
+
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit">
+		</li>
+			</ul>
+        </form>	
+
+		<form id="form" class="appnitro" enctype="multipart/form-data" method="post" action="javascript:callMasloText()">						
+			<ul>
+			
+					<li id="li_1">
+		<label class="description" for="element_1">Text or Journal </label>
+		<div>
+			<input id="media2" name="media2" class="element file" type="textbox"> 
+		</div>  
+		</li>			<li id="li_3">
+		<label class="description" for="element_3">originTextID </label>
+		<div>
+			<input id="originTextID" name="originalMediaID" class="element text medium" type="text" maxlength="255" value="324234lkjhkljh234234"> 
+		</div> 
+		</li>	
+			
+					<li class="buttons">
+
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit">
+		</li>
+			</ul>
+        </form>	
+        <pre id="json">			
+		</pre>
+	<div id="page" style="width:100%; position:absolute; text-align: center;">
+	<div id="jellyfish" style="width:32px; height:32px; transform:scale(10); display:inline-block; margin:auto;"><div id="pixel" style="width:1px; height:1px;"></div>
+	</div>	
+	</div>
+        <script>document.getElementById('modelsToCall').value = JSON.stringify({"imageMeta": 1,"imageSceneOut": 1,"imageObjects": 0,"imageTox": 1,"imagePose": 1,"faces": 0,"photoManipulation": 1});</script>
+    
+
+
+
+
+</body></html>
