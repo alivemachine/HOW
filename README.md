@@ -1,9 +1,8 @@
 <div align="center">
 <h1 align="center">
-<img src="https://alivemachine.io/image/galeriehd/how03.jpg" />
-<br>how
+<br>Hyper Object Web
 </h1>
-<h3>◦ GitHub: Unleashing your code's full potential. #How</h3>
+<h3>◦Visual search for the H.O.W</h3>
 <h3>◦ Developed with the software and tools listed below.</h3>
 
 <p align="center">
