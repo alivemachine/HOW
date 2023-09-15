@@ -26,7 +26,6 @@
 - [📒 Table of Contents](#-table-of-contents)
 - [📍 Overview](#-overview)
 - [🧩 Modules](#modules)
-- [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -60,45 +59,6 @@ The project consists of two HTML webpages that utilize JavaScript to offer users
 | [how02.html](https://github.com/alivemachine/how/blob/main/how02.html) | The code creates an interactive webpage where users can type and manipulate a jellyfish-shaped pixel display. Each character in the user's input generates a unique visual effect on the jellyfish using box shadows and colors. The code dynamically adjusts the pixel's position, color, and other properties based on user input.                            |
 
 </details>
-
----
-
-## 🚀 Getting Started
-
-### ✔️ Prerequisites
-
-Before you begin, ensure that you have the following prerequisites installed:
-> - `ℹ️ Requirement 1`
-> - `ℹ️ Requirement 2`
-> - `ℹ️ ...`
-
-### 📦 Installation
-
-1. Clone the how repository:
-```sh
-git clone https://github.com/alivemachine/how
-```
-
-2. Change to the project directory:
-```sh
-cd how
-```
-
-3. Install the dependencies:
-```sh
-`ℹ️  INSERT-DESCRIPTION`
-```
-
-### 🎮 Using how
-
-```sh
-`ℹ️  INSERT-DESCRIPTION`
-```
-
-### 🧪 Running Tests
-```sh
-`ℹ️  INSERT-DESCRIPTION`
-```
 
 ---
 
