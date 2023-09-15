@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">
-<img src="https://github.com/alivemachine/Paiper/blob/04/ogthumb.png" />
+<img src="https://alivemachine.io/image/galeriehd/how03.jpg" />
 <br>how
 </h1>
 <h3>◦ GitHub: Unleashing your code's full potential. #How</h3>
@@ -37,6 +37,8 @@
 
 
 ## 📍 Overview
+
+The H.O.W transforms dense, uncategorized data into a visual representation. This representation serves as an AVATAR of the data. Interact with the program, and let it guide your actions. The third version incorporates sentiment analysis via body and face recognition, allowing users to refine the information and connect with the desired signal.
 
 The project consists of two HTML webpages that utilize JavaScript to offer users interactive and visually appealing experiences. The first webpage allows users to submit either an image or text for analysis using the Maslo Companion API, updating the page with the analysis results and dynamic visual effects. The second webpage lets users manipulate a jellyfish-shaped pixel display by typing and generating unique visual effects based on their input, dynamically adjusting the pixel's properties. The project aims to provide engaging and interactive experiences while showcasing the capabilities of the Maslo Companion API and creative uses of JavaScript for visual effects.
 
