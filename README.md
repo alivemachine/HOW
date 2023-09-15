@@ -6,8 +6,6 @@
 <h3>◦ GitHub: Unleashing your code's full potential. #How</h3>
 <h3>◦ Developed with the software and tools listed below.</h3>
 
-<p><img width="100" src="https://alivemachine.io/image/fronthand/openai.png" alt="OpenAI logo" /></p>
-
 <p align="center">
 <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style&logo=HTML5&logoColor=white" alt="HTML5" />
 </p>
