@@ -28,8 +28,6 @@
 ## 📒 Table of Contents
 - [📒 Table of Contents](#-table-of-contents)
 - [📍 Overview](#-overview)
-- [⚙️ Features](#-features)
-- [📂 Project Structure](#project-structure)
 - [🧩 Modules](#modules)
 - [🚀 Getting Started](#-getting-started)
 - [🤝 Contributing](#-contributing)
@@ -44,22 +42,6 @@ The project consists of two HTML webpages that utilize JavaScript to offer users
 
 ---
 
-## ⚙️ Features
-
-| Feature                | Description                           |
-| ---------------------- | ------------------------------------- |
-| **⚙️ Architecture**     | The codebase consists of HTML webpages with JavaScript functions that leverage the Maslo Companion API. It follows a client-side architecture, where the code makes HTTP POST requests to the API endpoints and updates the webpage dynamically. Key features include image/text analysis and applying visual effects based on the analysis results.  |
-| **📖 Documentation**   | The repository lacks clear documentation. More information about the project's functionalities, design decisions, and usage guidelines would enhance its comprehensiveness and guidance for users.   |
-| **🔗 Dependencies**    | The codebase relies on the Maslo Companion API for performing image/text analysis. Other external dependencies are not evident given the information provided.   |
-| **🧩 Modularity**      | Based on the given file descriptions, the system appears to have a modular structure. The code is organized into separate files for different functionalities (how.html for analysis using the Maslo Companion API and how02.html for a pixel display). However, a closer examination of the codebase would be needed to ascertain the true level of modularity.   |
-| **✔️ Testing**          | No information is available about testing strategies or tools used for this codebase. The existence and coverage of any tests remain unclear.   |
-| **⚡️ Performance**      | Judging performance solely based on the file descriptions is not possible. In terms of overall performance, the code may be subject to the efficiency and speed of the Maslo Companion API for analysis and user experience.   |
-| **🔐 Security**        | Security measures are not mentioned specifically. Since the code interacts with an external API and potentially submits user data, ensuring proper handling and protection of sensitive data would be crucial.   |
-| **🔀 Version Control** | The codebase utilizes Git as the version control system, as indicated by the GitHub repository. However, specific practices, branching strategies, and release management are not provided.   |
-| **🔌 Integrations**    | The codebase integrates with the Maslo Companion API for analysis functionality. Details about other integrations or interactions with external services are not mentioned.   |
-| **📶 Scalability**     | Scalability considerations are not evident from the information provided. The architectural decisions and relevant design choices in the system may impact its scalability.   |
-
----
 
 
 ## 📂 Project Structure
@@ -71,7 +53,7 @@ The project consists of two HTML webpages that utilize JavaScript to offer users
 
 ## 🧩 Modules
 
-<details closed><summary>Root</summary>
+<details open><summary>Root</summary>
 
 | File                                                                   | Summary                                                                                                                                                                                                                                                                                                                                                         |
 | ---                                                                    | ---                                                                                                                                                                                                                                                                                                                                                             |
@@ -148,6 +130,6 @@ The project maintainers will review your changes and provide feedback or merge t
 ---
 ## 📄 License
 
-This project is licensed under the `ℹ️  INSERT-LICENSE-TYPE` License. See the [LICENSE](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository) file for additional info.
+This project is licensed under the MIT License. See the [LICENSE](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository) file for additional info.
 
 ---
